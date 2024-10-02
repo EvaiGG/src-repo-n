@@ -16,4 +16,8 @@ public class ResponseBean  <T>{
     Map success(T data, String code) {
       return Map.of("data", data, "code", code);  
     }
+    
+    Map fail(String ErrMsg) {
+        return Map.of("code", 500, "info", ErrMsg);
+    }
 }
